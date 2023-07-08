@@ -84,7 +84,7 @@ setTimeout(typeText, state.newTextDelay + 1000)
   </header>
   <main>
     <div class="flex justify-between">
-      <div class="p-20 font-mPlus1Code font-bold">sjadsah</div>
+      <div class="p-20 font-mPlus1Code font-bold">Testing deployment</div>
       <div class="flex justify-end">
         <div class="p-32 mr-4 mt-11 bg-[#9292C8] rounded-full"></div>
         <div class="p-24 mr-7 mt-16 absolute bg-[#BFBFE2] rounded-full"></div>
