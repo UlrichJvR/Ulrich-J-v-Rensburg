@@ -1,0 +1,1 @@
+import{_ as e,o,c as t,a as s}from"./index-34f1f3d1.js";const c={},n={class:"about text-white"},_=s("h1",null,"Coming soon",-1),a=[_];function r(i,d){return o(),t("div",n,a)}const f=e(c,[["render",r]]);export{f as default};
