@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive } from "vue";
 interface aboutNavState {
-  hover: boolean
-  hidden: boolean
+  hover: boolean;
+  hidden: boolean;
 }
 
 const state = reactive<aboutNavState>({
   hover: false,
-  hidden: true
-})
+  hidden: true,
+});
 
 function animationEffect(isActive: boolean): Promise<boolean> {
   return new Promise(() => {
     setTimeout(() => {
-      state.hidden = isActive
-    }, 300)
-  })
+      state.hidden = isActive;
+    }, 300);
+  });
 }
 </script>
 
 <template>
   <div
-    @mouseover=";(state.hover = true), (state.hidden = false)"
-    @mouseleave=";(state.hover = false), animationEffect(true)"
-    class="rounded-br-full cursor-pointer bg-primary-blue-50"
+    @mouseover="(state.hover = true), (state.hidden = false)"
+    @mouseleave="(state.hover = false), animationEffect(true)"
+    class="rounded-br-full cursor-pointer bg-gradient-to-br from-[#91A6B2] to-[#56585E]"
     :class="[
       {
         'h-24 w-24  duration-300 p-0': !state.hover,
-        'h-32 w-32 bg-blue-500 p-2 duration-500': state.hover
-      }
+        'h-32 w-32 bg-blue-500 p-2 duration-500': state.hover,
+      },
     ]"
   >
     <div class="p-2 rounded-br-full">
@@ -42,11 +42,11 @@ function animationEffect(isActive: boolean): Promise<boolean> {
             {
               'animated-text-enter': state.hover,
               'animated-text-leave': !state.hover,
-              hidden: state.hidden
-            }
+              hidden: state.hidden,
+            },
           ]"
         >
-          About
+          Projects
         </div>
       </div>
       <img
@@ -54,7 +54,7 @@ function animationEffect(isActive: boolean): Promise<boolean> {
         class="logo rounded-full"
         :class="{
           'transform translate-y-2 duration-500': state.hover,
-          'transform translate-y-0 duration-300': !state.hover
+          'transform translate-y-0 duration-300': !state.hover,
         }"
         src="@/assets/logo.png"
         width="70"
